@@ -1,1 +1,198 @@
+Java If-Else
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        scanner.close();
+        if (N%2==0){
+            if (1<N && N<6)
+                System.out.print("Not Weird");
+            if (5<N && N<21)
+                System.out.print("Weird");
+            if (N>20)
+                System.out.print("Not Weird");
+        } else {
+            System.out.print("Weird");
+        }
+    }
+}
+
+Java Stdin and Stdout I
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt(), b = scan.nextInt(), c = scan.nextInt();
+        System.out.print(a+"\n"+b+"\n"+c);
+    }
+}
+
+Java Stdin and Stdout II
+
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        Double d = scan.nextDouble();
+        scan.nextLine();
+        String s = scan.nextLine();
+
+        // Write your code here.
+
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+    }
+}
+
+Java Loops I
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        for (int i=1;i<11;i++){
+            System.out.println(N+" x "+i+" = "+N*i);
+        }
+        scanner.close();
+    }
+}
+
+Java Loops II
+
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+       int q = in.nextInt(), c;
+        for (int i = 0; i < q; i++) {
+            c = 0;
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            c += a;
+            for (int j = 0; j < n; j++) {
+                c += b * ((int) Math.pow(2, j));
+                System.out.print(c + " ");
+            }
+            System.out.println();
+        }
+        in.close();
+    }
+}
+
+Java Datatypes
+
+import java.util.*;
+import java.io.*;
+
+
+
+class Solution{
+    public static void main(String []argh)
+    {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        for (int i = 0; i < t; i++) {
+
+            try {
+                long x = sc.nextLong();
+                System.out.println(x + " can be fitted in:");
+                if (x >= -128 && x <= 127) {
+                    System.out.println("* byte");
+                }
+                if (x >= -32768 && x <= 32767) {
+                    System.out.println("* short");
+                }
+                if (x >= -(Math.pow(2, 31)) && x <= (Math.pow(2, 31) - 1)) {
+                    System.out.println("* int");
+                }
+                if (x >= -(Math.pow(2, 63)) && x <= (Math.pow(2, 63) - 1)) {
+                    System.out.println("* long");
+                }
+
+                //Complete the code
+            } catch (Exception e) {
+                System.out.println(sc.next() + " can't be fitted anywhere.");
+            }
+
+        }
+    }
+}
+
+Java End-of-file
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] argh) {
+
+        Scanner sc = new Scanner(System.in);
+        int b = 1;
+        while (sc.hasNext()) {
+            String a = sc.nextLine();
+            System.out.println(b+" "+a);
+            b++;
+        }
+    }
+}
+
+Java Output Formatting
+
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("================================");
+            for(int i=0;i<3;i++){
+                String s1=sc.next();
+                int x=sc.nextInt();
+                //Complete this line
+                System.out.printf("%-14s %03d %n", s1, x);
+            }
+            System.out.println("================================");
+
+    }
+}
+
 
